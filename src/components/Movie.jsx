@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Movie = ({data}) => {
+const Movie = ({data, typeStyle}) => {
     const typeData = data.type === "movie" ? "./movie_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" : "./tv_gen_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg";
     return (
        <>
