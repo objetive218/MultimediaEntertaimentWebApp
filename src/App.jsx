@@ -5,6 +5,8 @@ import { useMovies } from './hooks/useMovies'
 import NavBar from './components/NavBar';
 import { useSearch } from './hooks/useSearch';
 import debounce from 'just-debounce-it';
+import Trending from './components/Trending';
+import Recommend from './components/recommend';
 
 
 function App() {
@@ -29,10 +31,12 @@ function App() {
         <img src="./search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="lupa" />
         <input type="text" value={search} onChange={handleSearch} placeholder='Search for movies or TV series'/>
       </form>
+      <Trending/>
+      <Recommend/>
       <ul>
         { 
-          movies?.map((e, i) => 
-            <li key={i}>
+          movies?.map((e) => 
+            <li key={e.id}>
             <Movie data={e}/>
             </li>
           ) 
