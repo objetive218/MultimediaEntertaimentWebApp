@@ -1,12 +1,13 @@
 
-export const searchMovies = async ({ search }) => {
-  if (search === "") return null;
+
+export const seachPagesMovies = async (recommendType, page) => {
+  if (recommendType === "") return null;
 
   try {
     const response = await fetch(
       `https://www.omdbapi.com/?apikey=${
         import.meta.env.VITE_API_KEY
-      }&s=${search}`
+      }&s=${recommendType}&page=${page}`
     );
     const json = await response.json();
     const movies = json.Search;
