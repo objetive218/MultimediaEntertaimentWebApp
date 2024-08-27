@@ -28,3 +28,21 @@ section ul li {
   align-items: center;
   gap: 5px;
 }
+
+
+/*Trending component*/
+.trending{
+  display: flex;
+  width: 40vw;
+  height: 100vh;
+}
+.trending ul{
+  display: flex;
+  flex-direction: row;
+}
+.trending ul li{
+  width: 20vw;
+}
+.trending ul li img{
+  width: 100px;
+}
