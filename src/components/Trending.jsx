@@ -10,12 +10,12 @@ const Trending = () => {
     },[])
     return (  
             <section className="trending">
-                <h2>Trending</h2>
-                <ul>
+                <h2 className="trendingTitle">Trending</h2>
+                <ul className="trendingList"> 
                 {
                     movies?.map((e,i) => 
                     i < 5 ?
-                    <li key={i}>
+                    <li key={i} className="trendingMovie">
                         <Movie  data={e}/>
                     </li> : ""  
                     )
