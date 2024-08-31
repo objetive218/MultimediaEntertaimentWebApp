@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useReducer, useState } from 'react'
 import './App.css'
 import Movie from './components/Movie'
 import { useMovies } from './hooks/useMovies'
@@ -13,6 +13,7 @@ function App() {
   const {search, setSearch, error} = useSearch();
   const {movies, getMovies} = useMovies({search})
 
+  /*Form component */
   const debouncedGetMovies = useCallback(debounce(search => {
     console.log('search', search)
     getMovies(search);
@@ -23,16 +24,39 @@ function App() {
     setSearch(newSearch);
     debouncedGetMovies(newSearch);
   }
+  /*reducer nav */
+  const [actualPagestate, setActualPagestate] = useState("home");
+  function setPage(actualPage, action){
+    switch (actualPage) {
+      case "home":
+        
+        break;
+      case "movies":
+        
+        break;
+      case "series":
+        
+        break;
+      case "bookMarks":
+        
+        break;
+      default:
+        break;
+    }
+  }
+  const [actualPage, getPage] = useReducer(setPage, "home")
 
   return (
     <main>
-      <NavBar/>
+      <NavBar page={actualPagestate} changePage={setActualPagestate}/>
       <form action="#" className='searchForm'>
         <img src="./search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="lupa" />
         <input type="text" value={search} onChange={handleSearch} placeholder='Search for movies or TV series'/>
       </form>
-      <Trending/>
-      <Recommend/>
+      {actualPagestate === "home" && <Trending/>}
+      {actualPagestate === "home" && <Recommend/>}
+      {/*search render */}
+
       <ul>
         { 
           movies?.map((e) => 
