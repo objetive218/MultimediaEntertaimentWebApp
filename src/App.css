@@ -15,7 +15,7 @@ main {
   justify-content: center;
   align-items: center;
   max-width: 100vw;
-  height: auto;
+  max-height: 100vh;
   gap: 2px;
   background-color: rgba(16, 20, 31, 255);
   font-family: "SUSE", sans-serif;
@@ -43,22 +43,26 @@ main ul li {
   grid-column: 2/3;
   grid-row: 1/2;
   width: 90vw;
-  height: 5vh;
+  padding-top: 20px;
+  height: 5%;
   gap: 15px;
   align-items: center;
   display: flex;
   flex-direction: row;
   color: white;
 }
-.searchForm img{
+
+.searchForm img {
   padding-right: 10px;
 }
-.searchForm input{
+
+.searchForm input {
   width: 80%;
   background-color: rgba(16, 20, 31, 255);
   border: none;
   color: white;
 }
+
 /*NavBar*/
 .navBar {
   display: flex;
@@ -66,7 +70,7 @@ main ul li {
   width: 8vw;
   margin-left: 1vw;
   margin-right: 1vw;
-  height: 100vh;
+  height: 100%;
   grid-column: 1/2;
   grid-row: 1/4;
   justify-content: space-between;
@@ -78,8 +82,7 @@ main ul li {
   background-color: rgba(22, 29, 47, 255);
 }
 
-.navBar .navImage {
-}
+.navBar .navImage {}
 
 .navBar .navList {
   display: flex;
@@ -92,7 +95,9 @@ main ul li {
 .navBar img {
   width: 30px;
 }
-
+.navBar .navList li{
+  cursor: pointer;
+}
 /*Trending component*/
 .trending {
   display: flex;
@@ -101,7 +106,7 @@ main ul li {
   align-items: flex-start;
   flex-wrap: nowrap;
   width: 90vw;
-  height: 35vh;
+  height: 100%;
   grid-column: 2/3;
   grid-row: 2/3;
   overflow-x: scroll;
@@ -144,7 +149,6 @@ main ul li {
   position: absolute;
   border-radius: 10px;
   top: 0;
-
   mask-image: linear-gradient(black 90%,
       transparent);
 }
@@ -176,8 +180,8 @@ main ul li {
 
 /*Recommend component*/
 .recommend {
-  width: 90vw;
-  height: 60vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: rgba(16, 20, 31, 255);
@@ -200,7 +204,7 @@ main ul li {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  gap: 30px;
+  gap: 20px;
 }
 
 .recommend ul li {
