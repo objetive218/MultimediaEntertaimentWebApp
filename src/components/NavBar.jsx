@@ -1,11 +1,12 @@
 // eslint-disable-next-line react/prop-types
-const NavBar = ({page, changePage}) => {
+const NavBar = ({changePage, setSearch}) => {
     const handlePage = (page) => {
         changePage(page)
+        setSearch("");
     }
     return (
         <nav className="navBar">
-            <img src="./movie_24dp_EA3323_FILL1_wght400_GRAD0_opsz24_fill.svg" alt="logo" className="navImage" />
+            <img onClick={() => handlePage("home")} src="./movie_24dp_EA3323_FILL1_wght400_GRAD0_opsz24_fill.svg" alt="logo" className="navImage" />
             <ul className="navList">
                 <li onClick={() => handlePage("home")}><img src="./view_cozy_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="principal" /></li>
                 <li onClick={() => handlePage("movies")}><img src="./theaters_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="movies" /></li>
