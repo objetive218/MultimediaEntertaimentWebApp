@@ -67,7 +67,7 @@ main ul li {
 .navBar {
   display: flex;
   flex-direction: column;
-  width: 8vw;
+  width: 5vw;
   margin-left: 1vw;
   margin-right: 1vw;
   height: 100%;
