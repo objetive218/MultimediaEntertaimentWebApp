@@ -1,16 +1,21 @@
-import { useSections } from "../hooks/useSections";
-import { useEffect } from "react";
+import BookMarksContext from "../context/bookMarksContext";
+import Movie from "./Movie";
+import { useContext } from "react";
 
 const BookMarks = () => {
-     const {movies, getSection} = useSections();
-
-     useEffect(() => {
-        getSection("movies")
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    const {bookMarks}= useContext(BookMarksContext);   
     return (
-        <section>
-            
+        <section className="SearchResults">
+            <h2 className="section_title">BookMarks </h2>
+                <ul className="section_ul_results">
+                {
+                    bookMarks?.map((e) =>   
+                    <li key={e.id} className="section_li">
+                        <Movie  data={e}/>
+                    </li>  
+                    )
+                }
+                </ul>
         </section>
     );
 }

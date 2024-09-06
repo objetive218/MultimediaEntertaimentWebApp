@@ -11,11 +11,11 @@ const Recommend = () => {
     console.log(movies)
     return (
         <section className="recommend">
-                <h2>Recommended for you </h2>
-                <ul>
+                <h2 className="section_title">Recommended for you </h2>
+                <ul className="section_ul">
                 {
                     movies?.map((e) =>   
-                    <li key={e.id}>
+                    <li key={e.id} className="section_li">
                         <Movie  data={e}/>
                     </li>  
                     )

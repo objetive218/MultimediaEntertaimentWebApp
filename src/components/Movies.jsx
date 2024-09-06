@@ -10,12 +10,12 @@ const Movies = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return (
-        <section>
-            <h2>Movies </h2>
-                <ul>
+        <section className="SearchResults">
+            <h2 className="section_title">Movies </h2>
+                <ul className="section_ul_results">
                 {
                     movies?.map((e) =>   
-                    <li key={e.id}>
+                    <li key={e.id} className="section_li">
                         <Movie  data={e}/>
                     </li>  
                     )
