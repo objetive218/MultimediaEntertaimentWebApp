@@ -95,9 +95,11 @@ main ul li {
 .navBar img {
   width: 30px;
 }
-.navBar .navList li{
+
+.navBar .navList li {
   cursor: pointer;
 }
+
 /*Trending component*/
 .trending {
   display: flex;
@@ -193,12 +195,12 @@ main ul li {
   padding: 0px 20px 0px 0px;
 }
 
-.recommend h2 {
+.section_title {
   font-size: 25px;
   color: white;
 }
 
-.recommend ul {
+.section_ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -254,4 +256,19 @@ main ul li {
 .recommend ul li .titleMovie {
   font-size: 15px;
   color: white;
+}
+
+/*Search component*/
+.SearchResults {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(16, 20, 31, 255);
+  grid-column: 2/3;
+  grid-row: 2/4;
+  overflow-y: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 20px 0px 0px;
 }
