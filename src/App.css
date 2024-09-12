@@ -299,6 +299,9 @@ main ul li {
   align-items: center;
   border-radius: 20px;
 }
+.active{
+  display: none !important;
+}
 .createUser .titleForm{
 
 }
