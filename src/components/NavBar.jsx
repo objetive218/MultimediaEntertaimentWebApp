@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-const NavBar = ({changePage, setSearch}) => {
+const NavBar = ({changePage, setSearch, handleLoginView}) => {
     const handlePage = (page) => {
         changePage(page)
         setSearch("");
@@ -13,7 +13,7 @@ const NavBar = ({changePage, setSearch}) => {
                 <li onClick={() => handlePage("series")}><img src="./tv_gen_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="series" /></li>
                 <li onClick={() => handlePage("bookMarks")}><img src="./bookmark_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="bookmarks" /></li>
             </ul>
-            <img src="./account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="user" className="navUser" />
+            <img onClick={() => handleLoginView()} src="./account_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="user" className="navUser" />
         </nav>
     );
 }
