@@ -11,6 +11,7 @@ import Movies from './components/Movies';
 import BookMarks from './components/BookMarks';
 import Series from './components/Series';
 import SearchResults from './components/SearchResults';
+import CreateUser from './components/CreateUser';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       {actualPagestate === "series" && search.length < 3 && <Series/>}
       {actualPagestate === "bookMarks" && search.length < 3 && <BookMarks />}
       {search.length > 3 && <SearchResults movies={movies} search={search}/>}
+      <CreateUser/>
     </main>
   )
 }
