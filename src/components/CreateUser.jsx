@@ -6,9 +6,9 @@ const CreateUser = ({step, setStep}) => {
     const username = useRef();
     const password = useRef();
     const mail = useRef();
-    const getFormData = async(e) => {
-        e.preventDefault();
-       await postUser(username,password,mail)
+    const getFormData = (e) => {
+        e.preventDefault();      
+        postUser(username,password,mail)
     }
     return (
         <div className="createUser">

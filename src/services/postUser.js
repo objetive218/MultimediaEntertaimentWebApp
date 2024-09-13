@@ -1,13 +1,13 @@
 import axios from "axios";
 
 export const postUser = async (name,password,mail) => {
-    axios
-      .post(import.meta.env.API_POST, {
-        user: name.current.value,
-        password: password.current.value,
-        mail: mail.current.value,
-      })
-      .then((res) => {
-        console.log(res);
-      });
+   await axios
+     .post("http://localhost:3001/people", {
+       user: name.current.value,
+       password: password.current.value,
+       mail: mail.current.value,
+     })
+     .then((res) => {
+       console.log(res);
+     });
 };

@@ -5,9 +5,9 @@ import { searchUser } from "../services/searchUser";
 const Login = ({step, setStep}) => {
     const username = useRef();
     const password = useRef();
-    const handleForm = async(e) => {
+    const handleForm = (e) => {
         e.preventDefault();
-        await searchUser(username,password);
+        searchUser(username,password);
     }
     return (
         <div className="createUser">
